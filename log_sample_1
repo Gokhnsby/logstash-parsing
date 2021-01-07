@@ -4,11 +4,11 @@ Dec 1 14:12:53 ip-172-31-27-153 sshd[24007]: Starting session: shell on pts/4 fo
 Dec 30 14:34:02 ip-172-31-27-153 sshd[24997]: Starting session: command on pts/0 for user17 from 11.11.11.11
 Aug 1 23:34:02 ip-172-31-27-153 sshd[24]: Starting session: shell on pts/0 for root from 111.111.111.111
 *************************************************************************************************************
-.**config file**
+**.config file**
 
 input {stdin {}
   file {
-   path => "/home/soitronsoc/yt.log"
+   path => "/home/gokhan/samle1.log"
    start_position => "beginning"
    sincedb_path => "/dev/null"
   }
@@ -21,7 +21,7 @@ filter {
 output {
   elasticsearch {
    hosts => ["localhost:9200"]
-   index => "logstash-yt"
+   index => "logstash-test1"
 }
 stdout { codec => rubydebug }
 
